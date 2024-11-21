@@ -125,6 +125,7 @@ section.home {
 
 section.home div.home-content {
     max-width: 44rem;
+    z-index: 0;
 }
 
 div.home-content {
@@ -213,9 +214,9 @@ section.home div.profession-container div.profession-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: professionRotate 13s ease-out infinite;
+    /* animation: professionRotate 13s ease-out infinite; */
 }
-
+/* 
 @keyframes professionRotate {
     0%,20% {
         transform: rotate(0deg);
@@ -232,7 +233,7 @@ section.home div.profession-container div.profession-box {
     100% {
         transform: rotate(-360deg);
     }
-}
+} */
 
 section.home div.profession-box div.profession {
     position: absolute;
@@ -702,6 +703,7 @@ div.about-content p {
         left: 3.2rem; /* ----------Verificada---------- */
     }
 
+
     .home .profession-container .overlay {
         left: 36rem;    /* Roxo de fundo   Verificada */
         margin: 48px 0px 0px 0px;
@@ -725,20 +727,36 @@ div.about-content p {
 }  
 
 @media (max-width: 991px) {
+    html {
+        font-size: 48%;
+    }
+    
+    
     .home .home-content {
         max-width: 50rem;
     }
 
     .home .profession-container .profession-box {
-        right: -45rem;
+        left: 75rem;
     }
 
     .home .profession-container .profession-box .profession {
         left: 3.2rem; /* ----------Verificada---------- */
     }
 
+    .navbar a:nth-child(1),
+    .navbar a:nth-child(2) {
+        color: var(--main-color);
+    }
+
+    .navbar a.active::before {
+        color: var(--main-color);
+        opacity: .7;
+    }
+    
+
     .home .profession-container .overlay {
-        right: -39.5rem;
+        left: 65rem;
     }
 
     .home-img img {
@@ -761,8 +779,20 @@ div.about-content p {
 
 
 @media (max-width: 768px) {
+    html {
+        font-size:47%;
+    }
+    
     #menu-icon {
         display: block;
+    }
+
+    #darkMode-icon {
+        position: absolute;
+        right: 12rem;
+        font-size: 2.6rem;
+        color: var(--text-color);
+        margin-bottom: .1rem;
     }
 
     .navbar {
@@ -774,7 +804,27 @@ div.about-content p {
         background: var(--bg-color);
         border-top: .1rem solid rgba(0, 0, 0, 2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        display: none;
     }
 
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: var(--text-color);
+    }
+
+    .navbar a:nth-child(1),
+    .navbar a:nth-child(2) {
+        color: var(--text-color);
+    }
+
+    .navbar a:active {
+        color: var(--main-color);
+    }
 
 }
