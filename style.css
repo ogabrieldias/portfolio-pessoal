@@ -114,43 +114,43 @@ section{
     background-color: var(--bg-color);
 }
 
-section#home {    
+#home {    
     min-width: 100vh;
 }
 
-section.home {
+.home {
     display: flex;
     align-items: center;
 }
 
-section.home div.home-content {
+.home .home-content {
     max-width: 44rem;
     z-index: 0;
 }
 
-div.home-content {
+.home-content {
     z-index: 1;
 }
 
 
-div.home-content h3 {
+.home-content h3 {
     font-size: 3.2rem;
     font-weight: 700;
     line-height: .3;
 }
 
-div.home-content h1 {
+.home-content h1 {
     font-size: 5.6rem;
     font-weight: 700;
     margin-bottom: .3rem;
 }
 
-div.home-content p {
+.home-content p {
     font-size: 1.6rem;
     font-weight: 700;
 }
 
-div.home-content div.social-media a {
+.home-content .social-media a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -166,7 +166,7 @@ div.home-content div.social-media a {
     transition: .5s ease;
 }
 
-div.home-content div.social-media a:hover {
+.home-content .social-media a:hover {
     background-color: var(--main-color);
     color: var(--white-color);
 }
@@ -192,7 +192,7 @@ input.btn:hover, a.btn:hover{
     border-color: var(main);
 }
 
-section.home div.profession-container {
+.home .profession-container {
     position: absolute;
     top: 50%;
     right: 0;
@@ -204,7 +204,7 @@ section.home div.profession-container {
     text-align: center;
 }
 
-section.home div.profession-container div.profession-box {
+.home .profession-container .profession-box {
     position: absolute;
     top: 25px;
     right: 0;
@@ -235,7 +235,7 @@ section.home div.profession-container div.profession-box {
     }
 } */
 
-section.home div.profession-box div.profession {
+.home .profession-box .profession {
     position: absolute;
     left: 0;
     display: flex;
@@ -291,17 +291,17 @@ section.home div.profession-box div.circle {
      border-radius: 50%;
 }
 
-section.home div.profession-container div.overlay {
+/* section.home div.profession-container div.overlay {
     position: absolute;
     top: 25px;
     right: 0;
     width: 0;
     height: 0;
-    border-top: 384px solid var(--main-color);
-    border-right: 394px solid var(--main-color);
-    border-bottom: 394px solid var(--main-color);
-    border-left: 384px solid transparent;
-}
+    border-top: 200px solid var(--main-color);
+    border-right: 100px solid var(--main-color);
+    border-bottom: 200px solid var(--main-color);
+    border-left: 100px solid transparent;
+} */
 
 div.home-img img {
     position: absolute;
@@ -624,6 +624,20 @@ div.about-content p {
 
 
 /* BREAKPOINTS */
+@media (max-width: 1920px) {
+    section.home div.profession-container div.overlay {
+        position: absolute;
+        top: 25px;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 384px solid var(--main-color);
+        border-right: 394px solid var(--main-color);
+        border-bottom: 394px solid var(--main-color);
+        border-left: 384px solid transparent;
+    }
+}
+
 @media (max-width: 1440px) {
     .header{
         padding: 2rem 7%;
@@ -634,13 +648,15 @@ div.about-content p {
         font-size: 2.1rem;
     }
     
+
+
     .logo {
         font-size: 3.5rem;
     }
 
-    .home .profession-container {
+    /* .home .profession-container { código desnecessário
         height: 85.8rem;
-    }
+    } */
 
     section {
         padding: 10rem 7% 2rem;
@@ -663,6 +679,19 @@ div.about-content p {
         left: 31rem;    /* Roxo de fundo */
         margin: 24px 0px 0px 0px;
     }
+
+    section.home div.profession-container div.overlay {
+        position: absolute;
+        top: 25px;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 384px solid var(--main-color);
+        border-right: 394px solid var(--main-color);
+        border-bottom: 394px solid var(--main-color);
+        border-left: 384px solid transparent;
+    }
+    
 
     #profession0 {
         left: 5.8rem;
@@ -709,6 +738,19 @@ div.about-content p {
         margin: 48px 0px 0px 0px;
     }
     
+    
+    section.home div.profession-container div.overlay {
+        position: absolute;
+        top: 25px;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 384px solid var(--main-color);
+        border-right: 394px solid var(--main-color);
+        border-bottom: 394px solid var(--main-color);
+        border-left: 384px solid transparent;
+    }
+
     #profession0 {
         left: 5.8rem;
     }
@@ -849,12 +891,118 @@ div.about-content p {
         margin: 2.5rem .75rem 3rem;
     }
 
-    .home .profession-container .overlay {
+    .home .profession-container {
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .home .profession-container .profession-box {
         position: fixed;
-        top: -70rem;
-        left: 50%;
+        top: 46%;
+        left: 0;
+        border-radius: 0;
+        width: 100%;
+    }
+
+     .home .profession-box .profession {
+        padding: 0 13px;
+        left: auto;
+        transform-origin: 0;
+    } 
+
+    .home .profession-box .profession:nth-child(1) { 
+        transform: rotate(-90deg) translate(-75px, -55px);
+    }
+    
+    .home .profession-box .profession:nth-child(1) i {
+        margin-right: 0;
+    }
+    
+    .home .profession-box .profession:nth-child(2) {
+        transform: rotate(-0deg) translate(-290px, -285px);
+    }
+    
+    .home .profession-box .profession:nth-child(3) {
+        transform: rotate(90deg) translate(108px, -621px);
+    }
+    
+    .home .profession-box .profession:nth-child(4) {
+        transform: rotate(180deg) translate(-450px, -175px);
+    }
+
+    .home .profession-box .circle {
+        position: fixed;
+        width: 670px;
+        height: 670px;
+        z-index: -1;
+    }  
+
+    /* .home .profession-container {
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .home .profession-container .profession-box {
+        position: fixed;
+        top: 60%;
+        left: 0;
+        border-radius: 0;
+        width: 100%;
+    }
+
+     .home .profession-box .profession {
+        padding: 0 13px;
+        left: auto;
+        transform-origin: 0;
+    } 
+
+    .home .profession-box .profession:nth-child(1) { 
+        transform: rotate(-90deg) translate(-120px, -210px);
+    }
+    
+    .home .profession-box .profession:nth-child(1) i {
+        margin-right: 0;
+    }
+    
+    .home .profession-box .profession:nth-child(2) {
+        transform: rotate(0deg) translate(0px, -335px);
+    }
+    
+    .home .profession-box .profession:nth-child(3) {
+        transform: rotate(90deg) translate(-115px, -450px);
+    }
+    
+    .home .profession-box .profession:nth-child(4) {
+        transform: rotate(180deg) translate(-2200px, -335px);
+    }
+
+    .home .profession-box .circle {
+        position: fixed;
+        width: 670px;
+        height: 670px;
+        z-index: -1;
+    }   */
+
+
+
+
+    
+    .home .profession-container .overlay {
+        left: 29.9%;
+        transform: rotate(90deg) translate(-50%, -15.3%) scale(2.7);
+    }
+    
+    section.home div.profession-container div.overlay {
+        position: absolute;
+        top: 500px;
         right: 0;
-        transform: rotate(90deg) translate(-50%, 50%) scale(3);
-        border-width: 23.9rem;
+        width: 0;
+        height: 0;
+        border-top: 152px solid var(--main-color);
+        border-right: 100px solid var(--main-color);
+        border-bottom: 151px solid var(--main-color);
+        border-left: 100px solid transparent;
     }
 }
