@@ -944,12 +944,16 @@ div.about-content p {
     }  
     
     .home .profession-container .overlay {
+        width: 100%;
+        height: 100vh;
+        position: relative;
         left: 21.8%;
         transform: rotate(90deg) translate(-50%, -15.3%) scale(1);
-    }
+        overflow: hidden;
+    } 
     
-    section.home div.profession-container div.overlay {
-        position: absolute;
+    /* section.home div.profession-container div.overlay {
+        position: fixed;
         top: 228px;
         right: 0;
         width: 0;
@@ -958,6 +962,21 @@ div.about-content p {
         border-right: 100px solid var(--main-color);
         border-bottom: 385px solid var(--main-color);
         border-left: 100px solid transparent;
+    } */
+
+    
+    section.home div.profession-container div.overlay {
+        position: fixed;
+        top: 228px;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-top: 50.13vw solid var(--main-color);  /* A largura da borda ajustada para a largura da tela */
+        border-right: 13.021vw solid var(--main-color);  /* A largura da borda ajustada para a largura da tela */
+        border-bottom: 50.13vw solid var(--main-color); /* A largura da borda ajustada para a largura da tela */
+        border-left: 13.021vw solid transparent;
+        
+    
     }
 
     .about {
