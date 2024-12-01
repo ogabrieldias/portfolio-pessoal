@@ -216,7 +216,7 @@ input.btn:hover, a.btn:hover{
     align-items: center;
     /* animation: professionRotate 13s ease-out infinite; */
 }
-/* 
+
 @keyframes professionRotate {
     0%,20% {
         transform: rotate(0deg);
@@ -233,7 +233,7 @@ input.btn:hover, a.btn:hover{
     100% {
         transform: rotate(-360deg);
     }
-} */
+}
 
 .home .profession-box .profession {
     position: absolute;
@@ -268,20 +268,20 @@ section.home div.profession h3 {
     font-weight: 600;
 }
 
-#profession0 {
+/* #profession0 {
     left: 3.2rem;
-}
+} */
 
 #profession1 {
     top: 35.5rem;
 }
 
-#profession2 {
+/* #profession2 {
     right: 55rem;
-}
+} */
 
 #profession3 {
-    bottom: 32.1rem;
+    bottom: 33.4rem;
 }
 
 section.home div.profession-box div.circle {
@@ -624,6 +624,7 @@ div.about-content p {
 
 
 /* BREAKPOINTS */
+
 @media (max-width: 1920px) {
     section.home div.profession-container div.overlay {
         position: absolute;
@@ -635,6 +636,12 @@ div.about-content p {
         border-right: 394px solid var(--main-color);
         border-bottom: 394px solid var(--main-color);
         border-left: 384px solid transparent;
+    }
+
+
+
+    .home .profession-box .profession:nth-child(1) {
+        left: 3.9rem;
     }
 }
 
@@ -671,8 +678,8 @@ div.about-content p {
         margin: 48px 0px 0px 0px;
     }
 
-    .home .profession-container .profession-box .profession {
-        left: 2rem; /* ----------Verificada---------- */
+    .home .profession-box .profession:nth-child(1) {
+        left: 6.4rem;
     }
 
     .home .profession-container .overlay {
@@ -692,18 +699,18 @@ div.about-content p {
         border-left: 384px solid transparent;
     }
     
-
+/* 
     #profession0 {
         left: 5.8rem;
-    }
+    } */
     
     #profession1 {
         top: 46.5rem;
     }
     
-    #profession2 {
+    /* #profession2 {
         right: 61rem;
-    }
+    } */
     
     #profession3 {
         bottom: 42.7rem;
@@ -751,17 +758,17 @@ div.about-content p {
         border-left: 384px solid transparent;
     }
 
-    #profession0 {
+    /* #profession0 {
         left: 5.8rem;
-    }
+    } */
     
     #profession1 {
         top: 46.3rem;
     }
     
-    #profession2 {
+    /* #profession2 {
         right: 62rem;
-    }
+    } */
     
     #profession3 {
         bottom: 42.6rem;
@@ -917,7 +924,8 @@ div.about-content p {
     } 
 
     .home .profession-box .profession:nth-child(1) { 
-        transform: rotate(-90deg) translate(-75px, 35px);
+        transform: rotate(-90deg) translate(-50%, -280%);
+        left: auto;
     }
     
     .home .profession-box .profession:nth-child(1) i {
@@ -930,11 +938,13 @@ div.about-content p {
     }
     
     .home .profession-box .profession:nth-child(3) {
-        transform: rotate(90deg) translate(-122px, -600px);
+        transform: rotate(90deg) translate(-50%, -390%);
+        left: auto;
     }
     
     .home .profession-box .profession:nth-child(4) {
-        transform: rotate(180deg) translate(-430px, -245px);
+        transform: rotate(180deg) translate(-100%, -270%);
+        left: auto;
     }
 
     .home .profession-box .circle {
