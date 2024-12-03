@@ -932,7 +932,7 @@ div.about-content p {
     } 
 
     .home .profession-box .profession:nth-child(1) { 
-        transform: rotate(-90deg) translate(-50%, -279%);
+        transform: rotate(-90deg) translate(-50%, -248%);
         left: auto;
     }
     
@@ -941,12 +941,12 @@ div.about-content p {
     }
     
     .home .profession-box .profession:nth-child(2) {
-        transform: rotate(0deg) translate(0%, -300%);
+        transform: rotate(0deg) translate(0%, -304%);
         left: auto;
     }
     
     .home .profession-box .profession:nth-child(3) {
-        transform: rotate(90deg) translate(-50%, -385%);
+        transform: rotate(90deg) translate(-50%, -374%);
         left: auto;
     }
     
@@ -973,7 +973,7 @@ div.about-content p {
     
     section.home div.profession-container div.overlay {
         position: fixed;
-        top: 453px;
+        top: 503px;
         right: 0;
         width: 0;
         height: 0;
