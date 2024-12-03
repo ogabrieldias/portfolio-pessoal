@@ -697,11 +697,11 @@ div.about-content p {
 
     section.home div.profession-container div.overlay {
         position: absolute;
-        top: 25px;
+        top: 0px;
         right: 0;
         width: 0;
         height: 0;
-        border-top: 384px solid var(--main-color);
+        border-top: 424px solid var(--main-color);
         border-right: 394px solid var(--main-color);
         border-bottom: 394px solid var(--main-color);
         border-left: 384px solid transparent;
