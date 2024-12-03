@@ -49,7 +49,7 @@ var swiper = new Swiper(".mySwiper", {
     spaceBetween: 50,
     loop: true,
     grabCursor: true,
-    pagination: {
+    pagination: {                    
       el: ".swiper-pagination",
       clickable: true,
     },
@@ -57,4 +57,12 @@ var swiper = new Swiper(".mySwiper", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-  });
+});
+
+// ================ dark light mode ================
+let darkModeIcon = document.querySelector('#darkMode-icon');
+
+darkModeIcon.onclick = () =>  {
+  darkModeIcon.classList.toggle('bx-sun');
+  document.body.classList.toggle('dark-mode');
+};
