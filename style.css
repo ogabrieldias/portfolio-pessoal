@@ -343,6 +343,7 @@ h2.heading {
 div.about-content h2 {
     text-align: left;
     line-height: 1.2;
+    margin-bottom: 4rem;
 }
 
 div.about-content h3 {
@@ -927,7 +928,7 @@ div.about-content p {
 
     .home .profession-container .profession-box {
         position: fixed;
-        top: 46%;
+        top: 49%;
         left: 0;
         border-radius: 0;
         width: 100%;
