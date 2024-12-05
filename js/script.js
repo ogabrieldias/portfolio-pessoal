@@ -43,6 +43,10 @@ navbar.classList.remove('active');
 };
  
 
+// ================ scroll reveal ================
+<script src="https://unpkg.com/scrollreveal"></script>
+
+
 // ================ swiper ================
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
@@ -66,3 +70,15 @@ darkModeIcon.onclick = () =>  {
   darkModeIcon.classList.toggle('bx-sun');
   document.body.classList.toggle('dark-mode');
 };
+
+
+// ================ scroll reveal ================
+ScrollReveal({ 
+  reset: true,
+  distance: '80px',
+  duration: 2000,
+  delay: 200
+});
+
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, .testimonial-wrapper, .contact form', { origin: 'bottom' });
